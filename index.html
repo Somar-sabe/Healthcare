@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
             body {
         font-family: 'Poppins', sans-serif;
         overflow-x: hidden;
@@ -106,7 +107,12 @@
     background: linear-gradient(180deg, #48C97A 0%, #74F6A3 100%);
     background: linear-gradient(180deg, color(display-p3 0.431 0.776 0.506) 0%, color(display-p3 0.592 0.953 0.671) 100%);
     }
-    
+    .language-btn{
+        color: #8E8E8E;
+    }
+    .language-btn.active {
+    color: #6EC681 !important; /* Green color for the active button */
+    }
     </style>
 </head>
 <body style="background-color: #E7E7E7;">
@@ -146,8 +152,8 @@
                 </ul>
             </div>
             <div class="language">
-                <button style="border: none;" onclick="changeLanguage('en')">En</button>
-                <button style="border: none;" onclick="changeLanguage('ru')">Ru</button>
+                <button class="language-btn" style="border: none;background-color: transparent;" onclick="changeLanguage('en')">EN</button>
+                <button class="language-btn" style="border: none;background-color: transparent;" onclick="changeLanguage('ru')">RU</button>
             </div>
         </div>
         <div class="first">
@@ -166,8 +172,8 @@
                 width: 62px;
                 height: 62px;
                 position: absolute;
-                top: 274px;
-                left: 760px;
+                top: 35vh;
+                left: 53vw;
                 padding: 69px 0px 0px 0px;
                 border-radius: 40px 0px 0px 0px;
                 opacity: 1;" src="aaFrame.png" alt="">
@@ -180,7 +186,7 @@
                 width: Fixed (37px)px;
                 height: Fixed (36px)px;
                 top: 389px;
-                left: 1132px;
+                left: 74vw;
                 padding: 10px 13px 10px 13px;
                 gap: 10px;
                 border-radius: 50%;
@@ -189,20 +195,20 @@
                       <img style="position: absolute;width: 20vw;
                       height: 18vh;
                       top: 383px;
-                      left: 1114px;
+                      left: 72vw;
                       gap: 0px;
                       border-radius: 10px 0px 0px 0px;
                       opacity: 1;
                       " src="Rectangle 5.png" alt="">
-                <p id="topHealth" style="position: absolute;width: 136px;height: 20px;top: 430px;left: 1181px;opacity: 1;font-family: Poppins;font-size: 14px;font-weight: 400;line-height: 19.6px;text-align: left;color: #143264;">Top Health Choices</p>
-                <p id="no1" style="position: absolute;width: 76px; height: 54px;top: 362px;left: 1181px;opacity: 1;font-family: Poppins;font-size: 37px;font-weight: 700;line-height: 51.8px;text-align: left;color: #143264;">No 1</p>
+                <p id="topHealth" style="position: absolute;width: 136px;height: 20px;top: 430px;left: 78vw;opacity: 1;font-family: Poppins;font-size: 14px;font-weight: 400;line-height: 19.6px;text-align: left;color: #143264;">Top Health Choices</p>
+                <p id="no1" style="position: absolute;width: 76px; height: 54px;top: 362px;left: 78vw;opacity: 1;font-family: Poppins;font-size: 37px;font-weight: 700;line-height: 51.8px;text-align: left;color: #143264;">No 1</p>
          
             </div>
         </div>
         <div class="bar">
             <img style="height: 36px; width: 177px;" height: 36px; width: 177px; src="Logo.png" alt="">
             <img style="height: 38px; width: 171px;"  src="Logo (1).png" alt="">
-            <img style="height: 22px; width: 176px;"  src="Logo (2).png" alt="">
+            <img style="height: 22px; width: 176px;padding-top: 2vh;"  src="Logo (2).png" alt="">
             <img style="height: 68px; width: 80px; " src="GSK_logo_2014 1.png" alt="">
             <img style="height: 36px; width: 222px;"  src="Novartis-Logo.svg 1.png" alt="">
         </div>
@@ -376,10 +382,10 @@
         <img  src="Group 540.png" alt="Logo">
         <div class="menu">
             <ul>
-                <li style="color: white;">Home</li>
-                <li style="color: white;">About us</li>
-                <li style="color: white;">Our Services</li>
-                <li style="color: white;">Contact</li>
+                <li id="hom" style="color: white;">Home</li>
+                <li id="abou" style="color: white;">About us</li>
+                <li id="serice" style="color: white;">Our Services</li>
+                <li id="contac" style="color: white;">Contact</li>
             </ul>
         </div>
     </div>
@@ -393,8 +399,14 @@
             window.changeLanguage = function(language) {
                 document.cookie = "selectedLanguage=" + language + "; path=/";
                 loadTranslations(language); // Apply the translations without reloading the page
+    
+                // Update active button
+                document.querySelectorAll('.language-btn').forEach(btn => {
+                    btn.classList.remove('active'); // Remove active class from all buttons
+                });
+                document.getElementById(`${language}-btn`).classList.add('active'); // Add active class to selected button
             }
-        
+    
             function loadTranslations(language) {
                 const translationScript = document.getElementById(`translations-${language}`);
                 if (translationScript) {
@@ -409,20 +421,26 @@
                     }
                 }
             }
-        
+    
             // Load the selected language on page load if available
             const language = getCookie('selectedLanguage');
             if (language) {
                 loadTranslations(language);
+                // Set the active button on page load
+                document.querySelectorAll('.language-btn').forEach(btn => {
+                    btn.classList.remove('active'); // Remove active class from all buttons
+                });
+                document.getElementById(`${language}-btn`).classList.add('active'); // Add active class to selected button
             }
-        
+    
             function getCookie(name) {
                 const value = `; ${document.cookie}`;
                 const parts = value.split(`; ${name}=`);
                 if (parts.length === 2) return parts.pop().split(';').shift();
             }
         });
-        </script>
+    </script>
+    
         
         
 
@@ -432,6 +450,10 @@
                 "about": "About us",
                 "services": "Our Services",
                 "contact": "Contact",
+                "hom": "Home",
+                "abou": "About us",
+                "service": "Our Services",
+                "contac": "Contact",
                 "path": "For Your Path\n<br>to Better Health\n<br>Starts Here",
                 "pharmacy": "Reliable pharmacy care for your journey to\n<br>improved health begins with us.",
                 "motto": "The motto of the year 2024 – «Fount of\n<br> Wisdom Magtymguly Pyragy»",
@@ -490,6 +512,10 @@
             "about": "О нас",
             "services": "Наши услуги",
             "contact": "Контакт",
+            "hom": "Главная",
+            "abou": "О нас",
+            "service": "Наши услуги",
+            "contac": "Контакт",
             "path": "Ваш путь\n<br>к лучшему здоровью\n<br>начинается здесь",
             "pharmacy": "Надежная фармацевтическая помощь на пути\n<br>к улучшению здоровья начинается с нами.",
             "motto": "Девиз 2024 года – «Источник\n<br> Мудрости Магтымгулы Пырагы»",
