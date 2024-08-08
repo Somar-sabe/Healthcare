@@ -26,6 +26,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            padding-left: 18vw;
         }
         .menu li {
             margin-right: 10px;
@@ -120,8 +121,8 @@ text-align: left;
     }
     </style>
 </head>
-<body style="background: linear-gradient(to left, #E7E7E7, #fff);">
-    <div class="main" >
+<body style="background: linear-gradient(to right, white, #e6f7ff);">
+    <div class="main" style="background: linear-gradient(to right, white, #e6f7ff);" >
         <img style="position: absolute;
         width: 254px;
         height: 454px;
@@ -146,14 +147,16 @@ text-align: left;
                    gap: 0px;
                    opacity: 1;
                    " src="Ellipse 192.png" alt="">
-        <div class="header">
+        <div class="header" style="background: linear-gradient(to right , #e6f7ff, white);">
+         
             <img  src="Group 539.png" alt="Logo">
+       
             <div class="menu">
                 <ul>
                     <li class="by" id="home">Home</li>
-                    <li class="by" id="about">About us</li>
-                    <li class="by" id="services">Our Services</li>
-                    <li class="by" id="contact">Contact</li>
+                    <li style="padding-left: 2vw;" class="by" id="about">About us</li>
+                    <li style="padding-left: 2vw;" class="by" id="services">Our Services</li>
+                    <li style="padding-left: 2vw;" class="by" id="contact">Contact</li>
                 </ul>
             </div>
             <div class="language">
@@ -171,7 +174,8 @@ text-align: left;
                 " onclick="changeLanguage('ru')">RU</button>
             </div>
         </div>
-        <div class="first" style="height: 100vh;">
+        <div class="first" style="height: 100vh;background: linear-gradient(to right , #e6f7ff, white);    margin-top: 0;
+    padding-top: 10vh;">
             <div class="firstpart" style=" position: absolute;left: 7vw;">
                 <img src="Frame 10.png" alt="">
                 <p id="path" style="margin-top: 1vh;color: #6EC681;font-size: 60px;font-weight: 700;line-height: 87.5px;margin-bottom: 1vh;" >For Your Path<br>to Better Health<br>Starts Here</p>
@@ -267,7 +271,9 @@ text-align: left;
         <p id="strive" style="width: 40vw;margin-top: 5vh;font-size: 40px;font-weight: 700;line-height: 56px;padding-left: 5vw;"  >Strive to provide a caring<br>and personalized experience.</p>
         <div class="featuregroub" style="margin-top: 5vh;padding-left: 2vw;">
             <div class="featur">
-               <img style="height: 46px;width: 46px;background-color: white;box-shadow: 0px 10px 20px 0px #0000001A;border-radius: 10%;" src="Frame.png" alt="">
+                <div style="height: 70px; width: 70px; background-color: white; box-shadow: 0px 10px 20px 0px #0000001A; border-radius: 10%; display: flex; align-items: center; justify-content: center;">
+                <img style="height: 46px; width: 46px;" src="Frame (1).png" alt="">
+            </div>
                <p style="font-family: Poppins;
                font-size: 27px;
                font-weight: 600; 
@@ -277,7 +283,9 @@ text-align: left;
                <p id="careDesc" class="somar">Expert care for critical<br> health needs.</p>
            </div>
            <div class="featur">
-               <img style="height: 46px;width: 46px;background-color: white;box-shadow: 0px 10px 20px 0px #0000001A;border-radius: 10%;" src="Frame (1).png" alt="">
+            <div style="height: 70px; width: 70px; background-color: white; box-shadow: 0px 10px 20px 0px #0000001A; border-radius: 10%; display: flex; align-items: center; justify-content: center;">
+               <img style="height: 46px;width: 46px;" src="Frame (1).png" alt="">
+            </div>
                <p style="font-family: Poppins;
                font-size: 27px;
                font-weight: 600;
@@ -287,7 +295,10 @@ text-align: left;
                <p id="staffDesc" class="somar">Experienced team providing<br> top care.</p>
            </div>
            <div class="featur">
-               <img style="height: 40px;width: 40px;background-color: white;box-shadow: 0px 10px 20px 0px #0000001A;border-radius: 10%;" src="Frame (2).png" alt="">
+            <div style="height: 70px; width: 70px; background-color: white; box-shadow: 0px 10px 20px 0px #0000001A; border-radius: 10%; display: flex; align-items: center; justify-content: center;">
+               
+               <img style="height: 40px;width: 40px;" src="Frame (2).png" alt="">
+            </div>
                <p style="font-family: Poppins;
                font-size: 27px;
                font-weight: 600;
@@ -297,7 +308,10 @@ text-align: left;
                <p id="facilitiesDesc" class="somar">State-of-the-art equipment<br> and services.</p>
            </div>
            <div class="featur">
-            <img style="height: 40px;width: 40px;background-color: white;box-shadow: 0px 10px 20px 0px #0000001A;border-radius: 10%;" src="cFrame.png" alt="">
+            <div style="height: 70px; width: 70px; background-color: white; box-shadow: 0px 10px 20px 0px #0000001A; border-radius: 10%; display: flex; align-items: center; justify-content: center;">
+               
+            <img style="height: 40px;width: 40px;" src="cFrame.png" alt="">
+            </div>
             <p style="font-family: Poppins;
             font-size: 27px;
             font-weight: 600;
@@ -336,7 +350,7 @@ text-align: left;
                 </div>
             </div>
 </div>
-                <div class="sexpart" style="height: 100vh;padding: 5vh 5vw;">
+                <div class="sexpart" style="height: 100vh;padding: 5vh 3vw 5vh 10vw ;">
                     <h1 id="comprehensiveMedicalServicesTitle" style="color: #6EC681;margin-bottom: 10vh;">Comprehensive Medical Services</h1>
                     <div class="featuregroub">
                      <div class="feature">
@@ -449,7 +463,24 @@ text-align: left;
                 </div>
             </div>
         </div>
+    
         <style>
+            .gallery-slider {
+    position: relative;
+    width: 70vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.gallery-slide {
+    display: none;
+    text-align: center;
+}
+
+.gallery-slide.active {
+    display: block;
+}
+
         .popup {
             display: none; /* Hidden by default */
             position: fixed;
@@ -555,7 +586,33 @@ text-align: left;
         });
     </script>
     
-        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.gallery-slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
+
+    document.getElementById('next-slide').addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    });
+
+    document.getElementById('prev-slide').addEventListener('click', function() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    });
+
+    // Show the first slide initially
+    showSlide(currentSlide);
+});
+
+        </script>
         
 
         <script id="translations-en" type="application/json">
