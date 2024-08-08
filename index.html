@@ -172,7 +172,7 @@ text-align: left;
             </div>
         </div>
         <div class="first" style="height: 100vh;">
-            <div class="firstpart" style="padding-left: 4vw;">
+            <div class="firstpart" style=" position: absolute;left: 7vw;">
                 <img src="Frame 10.png" alt="">
                 <p id="path" style="margin-top: 1vh;color: #6EC681;font-size: 60px;font-weight: 700;line-height: 87.5px;margin-bottom: 1vh;" >For Your Path<br>to Better Health<br>Starts Here</p>
                 <p id="pharmacy" style="margin-top: 1vh;" >Reliable pharmacy care for your journey to<br>improved health begins with us.</p>
@@ -180,8 +180,10 @@ text-align: left;
             </div>
             <div class="secondpart">
                 <div style="display: flex;margin-left: 10vw;">
-                    <img style="width: 80px;height: 81px;" src="logo_clqrx9s7d0024bpp8f98fa1lg 1.png" alt="">
-                <h1 id="motto" style="color: #6EC681;font-size: 25px;font-style: italic;margin-left: 1vw;">The motto of the year 2024 – «Fount of<br> Wisdom Magtymguly Pyragy»</h1>
+                    <img style="width: 80px;height: 81px;    left: 45vw;
+    position: absolute;top: 25vh;" src="logo_clqrx9s7d0024bpp8f98fa1lg 1.png" alt="">
+                <h1 id="motto" style="color: #6EC681;font-size: 25px;font-style: italic;margin-left: 1vw;top: 24vh;left: 50vw;
+    position: absolute;">The motto of the year 2024 – «Fount of<br> Wisdom Magtymguly Pyragy»</h1>
             </div>
           <img style="
                 width: 62px;
@@ -411,6 +413,96 @@ text-align: left;
     <p style="color: white;padding-left: 5vw;">Copyright © 2024. All Right Reserved.</p>
     </div>
     </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="popup-close">&times;</span>
+            <div class="four">
+                <div class="fivepart">
+                    <h2 id="gallery" style="color: #6EC681;">Gallery Feast your eyes</h2>
+                    <p id="welcome" style="color: #8E8E8E;">
+                        Welcome to Dostluk Dunyasi Pharmacy
+                        <br>
+                        Find any medication, even the rarest, at affordable prices.
+                        <br><br><br>
+                        We offer a wide range of products for <br>effective treatment and health maintenance. 
+                        Shop from the<br> comfort of your home using our online service.
+                        <br><br><br>
+                        Our couriers deliver your purchase to your specified <br>address at your convenience. 
+                        Simply choose your <br>medication and order through our phone numbers.
+                    </p>
+                </div>
+                <div class="sexpart">
+                    <div class="sevenpart">
+                        <img style="height: 170px;width: 295px;" src="Object (4).png" alt="">
+                        <img style="height: 170px;width: 255px;" src="Object.png" alt="">
+                    </div>
+                    <div class="eightpart">
+                        <img style="height: 170px;width: 182px;" src="Object (3).png" alt="">
+                        <img style="height: 170px;width: 182px;" src="Object (1).png" alt="">
+                        <img style="height: 170px;width: 182px;" src="Object (2).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            left: 17vw;
+            top: 15vh;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 1000000000000; /* Make sure it is on top of other content */
+        }
+        
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 70vw; /* Could be more or less depending on screen size */
+            max-width: 80vw;
+            position: relative;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        </style>
+</div>        
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Show the popup when the page loads
+        const popup = document.getElementById('popup');
+        const closeBtn = document.getElementById('popup-close');
+
+        // Show the popup
+        popup.style.display = 'block';
+
+        // Close the popup when the close button is clicked
+        closeBtn.onclick = function() {
+            popup.style.display = 'none';
+        }
+
+        // Close the popup when clicking outside of the popup content
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = 'none';
+            }
+        }
+    });
+</script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -586,6 +678,7 @@ text-align: left;
         }
         </script>
         
-    
+        
+        
 </body>
 </html>
