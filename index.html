@@ -105,36 +105,45 @@
     background: linear-gradient(180deg, #48C97A 0%, #74F6A3 100%);
     background: linear-gradient(180deg, color(display-p3 0.431 0.776 0.506) 0%, color(display-p3 0.592 0.953 0.671) 100%);
     }
+    
     </style>
 </head>
 <body style="background-color: #E7E7E7;">
     <div class="main" >
+        <img style="position: absolute;
+        width: 254px;
+        height: 454px;
+        top: 1392px;
+        left: 82vw;
+        gap: 0px;
+        opacity: 1;
+        " src="Ellipse 13.png" alt="">
         <div class="header">
             <img  src="Group 539.png" alt="Logo">
             <div class="menu">
                 <ul>
-                    <li class="by">Home</li>
-                    <li class="by">About us</li>
-                    <li class="by">Our Services</li>
-                    <li class="by">Contact</li>
+                    <li class="by" id="home">Home</li>
+                    <li class="by" id="about">About us</li>
+                    <li class="by" id="services">Our Services</li>
+                    <li class="by" id="contact">Contact</li>
                 </ul>
             </div>
             <div class="language">
-                <button style="border: none;">En</button>
-                <button style="border: none;">Ru</button>
+                <button style="border: none;" onclick="changeLanguage('en')">En</button>
+                <button style="border: none;" onclick="changeLanguage('ru')">Ru</button>
             </div>
         </div>
         <div class="first">
             <div class="firstpart" style="padding-left: 4vw;">
                 <img src="Frame 10.png" alt="">
-                <p style="margin-top: 1vh;color: #6EC681;font-size: 60px;font-weight: 700;line-height: 87.5px;margin-bottom: 1vh;" >For Your Path<br>to Better Health<br>Starts Here</p>
-                <p style="margin-top: 1vh;" >Reliable pharmacy care for your journey to<br>improved health begins with us.</p>
+                <p id="path" style="margin-top: 1vh;color: #6EC681;font-size: 60px;font-weight: 700;line-height: 87.5px;margin-bottom: 1vh;" >For Your Path<br>to Better Health<br>Starts Here</p>
+                <p id="pharmacy" style="margin-top: 1vh;" >Reliable pharmacy care for your journey to<br>improved health begins with us.</p>
                 
             </div>
             <div class="secondpart">
                 <div style="display: flex;margin-left: 10vw;">
                     <img style="width: 80px;height: 81px;" src="logo_clqrx9s7d0024bpp8f98fa1lg 1.png" alt="">
-                <h1 style="color: #6EC681;font-size: 25px;font-style: italic;margin-left: 1vw;">The motto of the year 2024 – «Fount of<br> Wisdom Magtymguly Pyragy»</h1>
+                <h1 id="motto" style="color: #6EC681;font-size: 25px;font-style: italic;margin-left: 1vw;">The motto of the year 2024 – «Fount of<br> Wisdom Magtymguly Pyragy»</h1>
             </div>
           <img style="
                 width: 62px;
@@ -168,8 +177,8 @@
                       border-radius: 10px 0px 0px 0px;
                       opacity: 1;
                       " src="Rectangle 5.png" alt="">
-                <p style="position: absolute;width: 136px;height: 20px;top: 430px;left: 1181px;opacity: 1;font-family: Poppins;font-size: 14px;font-weight: 400;line-height: 19.6px;text-align: left;color: #143264;">Top Health Choices</p>
-                <p style="position: absolute;width: 76px; height: 54px;top: 362px;left: 1181px;opacity: 1;font-family: Poppins;font-size: 37px;font-weight: 700;line-height: 51.8px;text-align: left;color: #143264;">No 1</p>
+                <p id="topHealth" style="position: absolute;width: 136px;height: 20px;top: 430px;left: 1181px;opacity: 1;font-family: Poppins;font-size: 14px;font-weight: 400;line-height: 19.6px;text-align: left;color: #143264;">Top Health Choices</p>
+                <p id="no1" style="position: absolute;width: 76px; height: 54px;top: 362px;left: 1181px;opacity: 1;font-family: Poppins;font-size: 37px;font-weight: 700;line-height: 51.8px;text-align: left;color: #143264;">No 1</p>
          
             </div>
         </div>
@@ -188,14 +197,19 @@
                 <img style="width:340px; height:400.72px"  src="Image Placeholder.png" alt="">
             </div>
             <div class="fourpart" style="margin-top: 0vh;padding-top: 0vh;">
-                <p style="width: 20vw;color: #48C97A;">President of Turkmenistan:</p>
-               <p style="margin-bottom: 0vh;width: 35vw;font-family: Poppins;margin-top: 0;
+                <p id="president" style="width: 20vw;color: #48C97A;font-family: Poppins;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 26px;
+                text-align: left;
+                ">|  President of Turkmenistan:</p>
+               <p id="name" style="margin-bottom: 0vh;width: 35vw;font-family: Poppins;margin-top: 0;
                font-size: 40px;
                font-weight: 700;
                line-height: 56px;
                text-align: left;
                ">Serdar Berdimuhamedov</p>
-               <p style="margin-top: 0vh; color: #8E8E8E;font-family: Poppins;width: 40vw;
+               <p id="quote" style="margin-top: 0vh; color: #8E8E8E;font-family: Poppins;width: 40vw;
                font-size: 26px;
                font-weight: 400;
                line-height: 41.6px;
@@ -206,34 +220,54 @@
     
 
         <div style="display: flex;flex-direction: column;margin-top: 10vh">
-        <p style="width: 40vw;margin-top: 5vh;font-size: 40px;font-weight: 700;line-height: 56px;padding-left: 5vw;"  >Strive to provide a caring<br>and personalized experience.</p>
+        <p id="strive" style="width: 40vw;margin-top: 5vh;font-size: 40px;font-weight: 700;line-height: 56px;padding-left: 5vw;"  >Strive to provide a caring<br>and personalized experience.</p>
         <div class="featuregroub" style="margin-top: 5vh;    padding-left: 2vw;">
             <div class="featur">
                <img style="height: 46px;width: 46px;" src="Frame.png" alt="">
-               <p>Intensive Care</p>
-               <p class="somar">Expert care for critical<br> health needs.</p>
+               <p style="font-family: Poppins;
+               font-size: 27px;
+               font-weight: 600;
+               line-height: 37.8px;
+               text-align: left;
+               " id="care">Intensive Care</p>
+               <p id="careDesc" class="somar">Expert care for critical<br> health needs.</p>
            </div>
            <div class="featur">
                <img style="height: 46px;width: 46px;" src="Frame (1).png" alt="">
-               <p>Qualified Staff</p>
-               <p class="somar">Experienced team providing<br> top care.</p>
+               <p style="font-family: Poppins;
+               font-size: 27px;
+               font-weight: 600;
+               line-height: 37.8px;
+               text-align: left;
+               "  id="staff">Qualified Staff</p>
+               <p id="staffDesc" class="somar">Experienced team providing<br> top care.</p>
            </div>
            <div class="featur">
                <img style="height: 40px;width: 40px;" src="Frame (2).png" alt="">
-               <p>Modern Facilities</p>
-               <p class="somar">State-of-the-art equipment<br> and services.</p>
+               <p style="font-family: Poppins;
+               font-size: 27px;
+               font-weight: 600;
+               line-height: 37.8px;
+               text-align: left;
+               " id="facilities">Modern Facilities</p>
+               <p id="facilitiesDesc" class="somar">State-of-the-art equipment<br> and services.</p>
            </div>
            <div class="featur">
             <img style="height: 40px;width: 40px;" src="cFrame.png" alt="">
-            <p>Patient-Centered</p>
-            <p class="somar">Focused on your health<br> and comfort.</p>
+            <p style="font-family: Poppins;
+            font-size: 27px;
+            font-weight: 600;
+            line-height: 37.8px;
+            text-align: left;
+            " id="patient">Patient-Centered</p>
+            <p id="patientDesc" class="somar">Focused on your health<br> and comfort.</p>
         </div>
        </div>
     </div>
         <div class="four">
             <div class="fivepart">
-                <h2 style="color: #6EC681;">Gallery Feast your eyes </h2>
-                <p>
+                <h2 id="gallery" style="color: #6EC681;">Gallery Feast your eyes </h2>
+                <p id="welcome">
                     Welcome to Dostluk Dunyasi Pharmacy
                     <br>
                     Find any medication, even the rarest, at affordable prices.
@@ -259,47 +293,47 @@
             </div>
 </div>
                 <div class="sexpart" style="height: 60vh;padding: 5vh 5vw;">
-                    <h1 style="color: #6EC681;">Comprehensive Medical Services</h1>
+                    <h1 id="comprehensiveMedicalServicesTitle" style="color: #6EC681;">Comprehensive Medical Services</h1>
                     <div class="featuregroub">
                      <div class="feature">
                         <img src="Vector.png" alt="">
-                        <p>Medication Management</p>
-                        <p class="somar">Ensuring safe and effective<br> use of medications with<br> personalized guidance and<br>expert advice.</p>
+                        <p id="medicationManagementTitle">Medication Management</p>
+                        <p id="medicationManagementDesc" class="somar">Ensuring safe and effective<br> use of medications with<br> personalized guidance and<br>expert advice.</p>
                     </div>
                     <div class="feature">
                         <img src="Vector (1).png" alt="">
-                        <p>Precision Care</p>
-                        <p class="somar">Providing accurate prescriptions<br>and personalized healthcare<br>solutions for every patient.</p>
+                        <p id="precisionCareTitle">Precision Care</p>
+                        <p id="precisionCareDesc" class="somar">Providing accurate prescriptions<br>and personalized healthcare<br>solutions for every patient.</p>
                     </div>
                     <div class="feature">
                         <img src="Vector (2).png" alt="">
-                        <p>Emergency Excellence</p>
-                        <p class="somar">Delivering top-tier emergency<br>care with quick response and <br>expert medical support.</p>
+                        <p id="emergencyExcellenceTitle">Emergency Excellence</p>
+                        <p id="emergencyExcellenceDesc" class="somar">Delivering top-tier emergency<br>care with quick response and <br>expert medical support.</p>
                     </div>
                 </div>
                 <div class="featuregroub">
                     <div class="feature">
                        <img src="aVector.png" alt="">
-                       <p>Patient Education</p>
-                       <p class="somar">Empowering patients with<br>essential health information<br>and personalized medication <br>guidance.</p>
+                       <p id="patientEducationTitle">Patient Education</p>
+                       <p id="patientEducationDesc" class="somar">Empowering patients with<br>essential health information<br>and personalized medication <br>guidance.</p>
                    </div>
                    <div class="feature">
                        <img src="aGroup.png" alt="">
-                       <p>Social Services</p>
-                       <p class="somar">Providing support and resources <br>for community health and well<br>-being through our dedicated<br>services.</p>
+                       <p id="socialServicesTitle">Social Services</p>
+                       <p id="socialServicesDesc" class="somar">Providing support and resources <br>for community health and well<br>-being through our dedicated<br>services.</p>
                    </div>
                    <div class="feature">
                        <img src="Group 11.png" alt="">
-                       <p>Pharmacy Services</p>
-                       <p class="somar">Offering a wide range of <br>pharmacy services, including<br>prescription refills and health<br>consultations.</p>
+                       <p id="pharmacyServicesTitle">Pharmacy Services</p>
+                       <p id="pharmacyServicesDesc" class="somar">Offering a wide range of <br>pharmacy services, including<br>prescription refills and health<br>consultations.</p>
                    </div>
                </div>
             </div>
         
-        <div class="third" style="margin-top: 60vh;">
+        <div class="third" style="margin-top: 40vh;">
             <div class="thirdpart">
                 <img width="340px" height="200.72px" src="Get in Touch with Dostluk Dünýäsi.png" alt="">
-                <p>Whether you have questions about our products, need <br>assistance with a prescription, or just want to learn more about <br>our services, we're here to help.
+                <p id="getInTouchDesc">Whether you have questions about our products, need <br>assistance with a prescription, or just want to learn more about <br>our services, we're here to help.
                      Please feel free<br> to reach out to us through any of the methods below.</p>
                 <h2>Phone Call</h2>
                 <p style="font-size:14px ;line-height: 16.94px; color: #5D5D5D;">34-01-31 (Customer Service)<br>34-04-31 (Customer Service)</p>
@@ -335,5 +369,161 @@
     <p style="color: white;padding-left: 5vw;">Copyright © 2024. All Right Reserved.</p>
     </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Handle language selection
+            window.changeLanguage = function(language) {
+                document.cookie = "selectedLanguage=" + language + "; path=/";
+                loadTranslations(language); // Apply the translations without reloading the page
+            }
+        
+            function loadTranslations(language) {
+                const translationScript = document.getElementById(`translations-${language}`);
+                if (translationScript) {
+                    // Parse the JSON with proper escaping
+                    const translations = JSON.parse(translationScript.textContent);
+                    for (const key in translations) {
+                        const element = document.getElementById(key);
+                        if (element) {
+                            // Replace newline characters with <br> tags and set innerHTML
+                            element.innerHTML = translations[key].replace(/\\n/g, '<br>');
+                        }
+                    }
+                }
+            }
+        
+            // Load the selected language on page load if available
+            const language = getCookie('selectedLanguage');
+            if (language) {
+                loadTranslations(language);
+            }
+        
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+        });
+        </script>
+        
+        
+
+        <script id="translations-en" type="application/json">
+            {
+                "home": "Home",
+                "about": "About us",
+                "services": "Our Services",
+                "contact": "Contact",
+                "path": "For Your Path\n<br>to Better Health\n<br>Starts Here",
+                "pharmacy": "Reliable pharmacy care for your journey to\n<br>improved health begins with us.",
+                "motto": "The motto of the year 2024 – «Fount of\n<br> Wisdom Magtymguly Pyragy»",
+                "topHealth": "Top Health Choices",
+                "no1": "No 1",
+                "president": "President of Turkmenistan:",
+                "name": "Serdar Berdimuhamedov",
+                "quote": "“Human health is the ultimate value of the society and state and that is why a great work will be executed in the sphere of public health protection, prevention and eradication of diseases, development of healthcare and medical industry in accordance with the world level.”",
+                "strive": "Strive to provide a caring\n<br>and personalized experience.",
+                "care": "Intensive Care",
+                "careDesc": "Expert care for critical\n<br> health needs.",
+                "staff": "Qualified Staff",
+                "staffDesc": "Experienced team providing\n<br> top care.",
+                "facilities": "Modern Facilities",
+                "facilitiesDesc": "State-of-the-art equipment\n<br> and services.",
+                "patient": "Patient-Centered",
+                "patientDesc": "Focused on your health\n<br> and comfort.",
+                "gallery": "Gallery Feast your eyes",
+                "welcome": "Welcome to Dostluk Dunyasi Pharmacy\n<br>Find any medication, even the rarest, at affordable prices.\n<br>\n<br>\n<br>We offer a wide range of products for\n<br>effective treatment and health maintenance.\n<br>Shop from the comfort of your home using our online service.\n<br><br><br>Our couriers deliver your purchase to your specified<br>address at your convenience.<br>Simply choose your medication and order through our phone numbers.",
+           
+                        "comprehensiveMedicalServicesTitle": "Comprehensive Medical Services",
+                        "medicationManagementTitle": "Medication Management",
+                        "medicationManagementDesc": "Ensuring safe and effective\n<br> use of medications with\n<br> personalized guidance and\n<br> expert advice.",
+                        "precisionCareTitle": "Precision Care",
+                        "precisionCareDesc": "Providing accurate prescriptions\n<br> and personalized healthcare\n<br> solutions for every patient.",
+                        "emergencyExcellenceTitle": "Emergency Excellence",
+                        "emergencyExcellenceDesc": "Delivering top-tier emergency\n<br> care with quick response and\n<br> expert medical support.",
+                        "patientEducationTitle": "Patient Education",
+                        "patientEducationDesc": "Empowering patients with\n<br> essential health information\n<br> and personalized medication\n<br> guidance.",
+                        "socialServicesTitle": "Social Services",
+                        "socialServicesDesc": "Providing support and resources\n<br> for community health and well\n<br> -being through our dedicated\n<br> services.",
+                        "pharmacyServicesTitle": "Pharmacy Services",
+                        "pharmacyServicesDesc": "Offering a wide range of\n<br> pharmacy services, including\n<br> prescription refills and health\n<br> consultations.",
+                        "getInTouchTitle": "Get in Touch with Dostluk Dünýäsi",
+                        "getInTouchDesc": "Whether you have questions about our products, need\n<br> assistance with a prescription, or just want to learn more about\n<br> our services, we're here to help. Please feel free\n<br> to reach out to us through any of the methods below.",
+                        "phoneCallTitle": "Phone Call",
+                        "phoneCallDesc": "34-01-31 (Customer Service)\n<br> 34-04-31 (Customer Service)",
+                        "emailTitle": "Email :",
+                        "emailDesc": "info@altairrerealestate",
+                        "contactUsTitle": "Contact us",
+                        "contactUsDesc": "Contact us for a quote, help or to join the team",
+                        "getInTouchTitle2": "Get in touch",
+                        "namePlaceholder": "Name",
+                        "emailPlaceholder": "Email",
+                        "messagePlaceholder": "...Write something..",
+                        "sendMessageBtn": "Send Message",
+                        "copyright": "Copyright © 2024. All Right Reserved."
+                    
+            }
+            </script>
+            
+    
+    <script id="translations-ru" type="application/json">
+        {
+            "home": "Главная",
+            "about": "О нас",
+            "services": "Наши услуги",
+            "contact": "Контакт",
+            "path": "Ваш путь\n<br>к лучшему здоровью\n<br>начинается здесь",
+            "pharmacy": "Надежная фармацевтическая помощь на пути\n<br>к улучшению здоровья начинается с нами.",
+            "motto": "Девиз 2024 года – «Источник\n<br> Мудрости Магтымгулы Пырагы»",
+            "topHealth": "Лучший выбор для здоровья",
+            "no1": "№ 1",
+            "president": "Президент Туркменистана:",
+            "name": "Сердар Бердымухамедов",
+            "quote": "«Здоровье человека - высшая ценность общества и государства, и поэтому будет проведена большая работа по защите общественного здоровья, профилактике и ликвидации заболеваний, развитию здравоохранения и медицинской промышленности в соответствии с мировым уровнем»",
+            "strive": "Старайтесь обеспечить заботливое\n<br>и персонализированное обслуживание.",
+            "care": "Интенсивная терапия",
+            "careDesc": "Экспертная помощь при критических\n<br> потребностях в здоровье.",
+            "staff": "Квалифицированный персонал",
+            "staffDesc": "Опытная команда, предоставляющая\n<br> лучшее обслуживание.",
+            "facilities": "Современные удобства",
+            "facilitiesDesc": "Современное оборудование\n<br> и услуги.",
+            "patient": "Ориентированность на пациента",
+            "patientDesc": "Ориентация на ваше здоровье\n<br> и комфорт.",
+            "gallery": "Галерея Праздник для глаз",
+            "welcome": "Добро пожаловать в аптеку Достлук Дюняси\n<br>Найдите любое лекарство, даже самое редкое, по доступным ценам.\n<br>\n<br>\n<br>Мы предлагаем широкий ассортимент продукции для\n<br>эффективного лечения и поддержания здоровья.\n<br>Покупайте из дома с помощью нашего онлайн-сервиса.\n<br><br><br>Наши курьеры доставят вашу покупку по указанному\n<br>адресу в удобное для вас время.\n<br>Просто выберите лекарства и закажите через наши телефоны.",
+                    "comprehensiveMedicalServicesTitle": "Комплексные медицинские услуги",
+                    "medicationManagementTitle": "Управление медикаментами",
+                    "medicationManagementDesc": "Обеспечение безопасного и эффективного\n<br> использования медикаментов с\n<br> персонализированным руководством и\n<br> экспертными рекомендациями.",
+                    "precisionCareTitle": "Точная забота",
+                    "precisionCareDesc": "Предоставление точных рецептов\n<br> и персонализированных решений в области\n<br> здравоохранения для каждого пациента.",
+                    "emergencyExcellenceTitle": "Отличное экстренное обслуживание",
+                    "emergencyExcellenceDesc": "Предоставление первоклассной экстренной\n<br> помощи с быстрым реагированием и\n<br> экспертной медицинской поддержкой.",
+                    "patientEducationTitle": "Образование пациентов",
+                    "patientEducationDesc": "Расширение знаний пациентов\n<br> о здоровье и персонализированное\n<br> руководство по медикаментам.",
+                    "socialServicesTitle": "Социальные услуги",
+                    "socialServicesDesc": "Предоставление поддержки и ресурсов\n<br> для общественного здоровья и благополучия\n<br> через наши специализированные услуги.",
+                    "pharmacyServicesTitle": "Фармацевтические услуги",
+                    "pharmacyServicesDesc": "Предложение широкого спектра\n<br> фармацевтических услуг, включая\n<br> пополнение рецептов и консультации по\n<br> здоровью.",
+                    "getInTouchTitle": "Свяжитесь с Dostluk Dünýäsi",
+                    "getInTouchDesc": "Если у вас есть вопросы о наших продуктах, нужна\n<br> помощь с рецептом или вы просто хотите узнать больше\n<br> о наших услугах, мы готовы помочь. Пожалуйста,\n<br> свяжитесь с нами любым из приведенных ниже способов.",
+                    "phoneCallTitle": "Телефонный звонок",
+                    "phoneCallDesc": "34-01-31 (Служба поддержки)\n<br> 34-04-31 (Служба поддержки)",
+                    "emailTitle": "Электронная почта :",
+                    "emailDesc": "info@altairrerealestate",
+                    "contactUsTitle": "Связаться с нами",
+                    "contactUsDesc": "Свяжитесь с нами для получения предложения, помощи или для того, чтобы присоединиться к команде",
+                    "getInTouchTitle2": "Свяжитесь с нами",
+                    "namePlaceholder": "Имя",
+                    "emailPlaceholder": "Электронная почта",
+                    "messagePlaceholder": "...Напишите что-нибудь..",
+                    "sendMessageBtn": "Отправить сообщение",
+                    "copyright": "Copyright © 2024. Все права защищены."
+            
+                
+        }
+        </script>
+        
+    
 </body>
 </html>
