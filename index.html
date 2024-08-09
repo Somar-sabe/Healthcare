@@ -213,7 +213,7 @@ text-align: left;
                 <img style="position: absolute;
                 width: Fixed (37px)px;
                 height: Fixed (36px)px;
-                top: 364px;
+                top: 394px;
                 left: 74vw;
                 padding: 10px 13px 10px 13px;
                 gap: 10px;
@@ -222,14 +222,14 @@ text-align: left;
                 " src="Framesom.png" alt="">
                       <img style="position: absolute;width: 16vw;
                       height: 17vh;
-                      top: 353px;
+                      top: 383px;
                       left: 73vw;
                       gap: 0px;
                       border-radius: 10px 0px 0px 0px;
                       opacity: 1;
                       " src="Rectangle 5.png" alt="">
-                <p id="topHealth" style="position: absolute;width: 136px;height: 20px;top: 400px;left: 78vw;opacity: 1;font-family: Poppins;font-size: 14px;font-weight: 400;line-height: 19.6px;text-align: left;color: #143264;">Top Health Choices</p>
-                <p id="no1" style="position: absolute;width: 76px; height: 54px;top: 332px;left: 78vw;opacity: 1;font-family: Poppins;font-size: 37px;font-weight: 700;line-height: 51.8px;text-align: left;color: #143264;">No 1</p>
+                <p id="topHealth" style="position: absolute;width: 136px;height: 20px;top: 430px;left: 78vw;opacity: 1;font-family: Poppins;font-size: 14px;font-weight: 400;line-height: 19.6px;text-align: left;color: #143264;">Top Health Choices</p>
+                <p id="no1" style="position: absolute;width: 76px; height: 54px;top: 362px;left: 78vw;opacity: 1;font-family: Poppins;font-size: 37px;font-weight: 700;line-height: 51.8px;text-align: left;color: #143264;">No 1</p>
          
             </div>
         </div>
@@ -446,89 +446,105 @@ text-align: left;
     <p style="color: white;padding-left: 5vw;">Copyright © 2024. All Right Reserved.</p>
     </div>
     </div>
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <span class="close" id="popup-close">&times;</span>
-            <div class="four">
-                <div class="fivepart">
-                    <h2 id="gallery" style="color: #6EC681;">Gallery Feast your eyes</h2>
-                    <p id="welcome" style="color: #8E8E8E;">
-                        Welcome to Dostluk Dunyasi Pharmacy
-                        <br>
-                        Find any medication, even the rarest, at affordable prices.
-                        <br><br><br>
-                        We offer a wide range of products for <br>effective treatment and health maintenance. 
-                        Shop from the<br> comfort of your home using our online service.
-                        <br><br><br>
-                        Our couriers deliver your purchase to your specified <br>address at your convenience. 
-                        Simply choose your <br>medication and order through our phone numbers.
-                    </p>
-                </div>
-                <div class="sexpart">
-                    <div class="sevenpart">
-                        <img style="height: 170px;width: 295px;" src="Object (4).png" alt="">
-                        <img style="height: 170px;width: 255px;" src="Object.png" alt="">
-                    </div>
-                    <div class="eightpart">
-                        <img style="height: 170px;width: 182px;" src="Object (3).png" alt="">
-                        <img style="height: 170px;width: 182px;" src="Object (1).png" alt="">
-                        <img style="height: 170px;width: 182px;" src="Object (2).png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <style>
-            .gallery-slider {
-    position: relative;
-    width: 70vw;
-    height: 70vh;
-    overflow: hidden;
-}
-
-.gallery-slide {
-    display: none;
-    text-align: center;
-}
-
-.gallery-slide.active {
-    display: block;
-}
-
+    <style>
         .popup {
-            display: none; /* Hidden by default */
-            position: fixed;
-            left: 17vw;
-            top: 15vh;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-            z-index: 1000000000000; /* Make sure it is on top of other content */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          z-index: 99999999999999999999999999;
         }
-        
+      
         .popup-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 70vw; /* Could be more or less depending on screen size */
-            max-width: 80vw;
-            position: relative;
+          position: relative;
+          background-color: #fff;
+          border-radius: 12px;
+          padding: 20px;
+          max-width: 900px;
+          max-height: 85vh;
+          width: 100%;
+          text-align: center;
         }
-        
+      
+        .popup-content img {
+          cursor: pointer;
+        }
+      
+        .large-image {
+          width: 100%;
+          height: auto;
+          max-height: 350px;
+          margin-bottom: 20px;
+          border-radius: 12px;
+        }
+      
+        .thumbnail-gallery {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+      
+        .thumbnail-gallery img {
+          width: 150px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 12px;
+          transition: transform 0.3s ease;
+        }
+      
+        .thumbnail-gallery img:hover {
+          transform: scale(1.1);
+        }
+      
         .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          font-size: 24px;
+          cursor: pointer;
         }
+      </style>
+      
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <span class="close" id="popup-close">&times;</span>
+          <h2 id="gallery" style="color: #6EC681;">Gallery Feast your eyes</h2>
+          <div class="large-image-container">
+            <img id="large-image" class="large-image" src="Object (4).png" alt="Large Image">
+          </div>
+          <div class="thumbnail-gallery">
+            <img src="Object.png" alt="Image 1" onclick="changeImage('Object.png')">
+            <img src="Object (3).png" alt="Image 2" onclick="changeImage('Object (3).png')">
+            <img src="Object (1).png" alt="Image 3" onclick="changeImage('Object (1).png')">
+            <img src="Object (2).png" alt="Image 4" onclick="changeImage('Object (2).png')">
+            <img src="Object (4).png" alt="Image 5" onclick="changeImage('Object (4).png')">
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        function changeImage(src) {
+          document.getElementById('large-image').src = src;
+        }
+      
+        // Close the popup
+        document.getElementById('popup-close').onclick = function() {
+          document.getElementById('popup').style.display = 'none';
+        };
         
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        </style>
-</div>        
+        // Open the popup on page load (optional)
+        window.onload = function() {
+          document.getElementById('popup').style.display = 'flex';
+        };
+      </script>
+      
+       
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Show the popup when the page loads
